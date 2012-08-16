@@ -16,5 +16,10 @@ urlpatterns = patterns('',
 	# (r'^admin/', include(admin.site.urls)),
 
 	(r'^$', 'mmcghan.views.index'),
-	(r'^techwriting$', 'mmcghan.views.techwriting'),
+	(r'^technical-writing$', 'mmcghan.views.technicalwriting'),
+	(r'^investigative-journalism-and-news$', 'mmcghan.views.investigativejournalismandnews'),
+	(r'^marcomm-and-trade-publications$', 'mmcghan.views.marcommandtradepublications'),
+	(r'^arts-entertainment-and-lifestyle$', 'mmcghan.views.artsentertainmentandlifestyle'),
+	(r'^commentary-and-creativity$', 'mmcghan.views.commentaryandcreativity'),
+	(r'^resume$', 'mmcghan.views.resume'),
 )

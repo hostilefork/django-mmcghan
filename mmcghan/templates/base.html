@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="en">
+<head>
+	<meta charset="utf-8">
+<!-- Regarding the "meta charset" above...to build good sites, how deeply must I
+understand character encoding? All I know at the moment is that it must come in the
+first 512 characters and  before content elements. All this comes from:
 
-<!--To build good sites, how deeply must I understand character encoding?
-All I know at the moment is that it must come in the first 512 characters and 
-before content elements. All this comes from:
+    http://www.sitepoint.com/a-basic-html5-template/#fbid=kU5lgNGeCp3
+    
+As well as guidelines at www.dontfeartheinternet.com. I don't know why it is 8 or if that
+refers to text size or what.  I believe meta tags need to be *in* the head section. -->
 
-www.sitepoint.com/a-basic-html5-template/#fbid=kU5lgNGeCp3 and the guidlines at 
-
-www.dontfeartheinternet.com. I don't know why it is 8 or if that refers to 
-text size or what.-->
-<meta charset="utf-8">
-
-<head>	
 	<!--Don't Fear the Internet says the title must come after the head, but SitePoint
 	puts it after the charset and is headless. Why? (Yes, I am the Louis C.K.'s daughter 
 	of coding. BTW I put a head in anyway).-->
@@ -47,10 +46,12 @@ text size or what.-->
 			alt="Valid HTML5!" height="31" width="87" />
 		</a>
 	</p>
+	
+	<!--SitePoint said that whenever technically possible, you get a speed advantage
+	by putting your scripts at the bottom of the body of the page.  How important is
+	this, really?  Review. -->
+	<!-- <script src="foo.js"></script> -->
 </body>
 </html>
 
-<!--SitePoint said to put this at the bottom of the page, sparking another question: As 
-in SpaceChem, are there some html5 code elements that need to be in a certain order 
-whereas others do not? And does this need to go before the endtags of body or html?-->
-<script src="js/scripts.js"></script>
+

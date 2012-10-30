@@ -53,3 +53,10 @@ def poker_gallery(request):
     	'backgroundcolor': 'FF0000'
     })
     return HttpResponse(t.render(c))
+
+def xxx(request):
+    t = loader.get_template('base.html')
+    c = Context({
+    })
+    return HttpResponse(t.render(c))
+

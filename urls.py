@@ -30,42 +30,42 @@ urlpatterns = patterns('',
 
 	# meredithmcghan.com/technical
 
-	(r'^technical/voting$', xxx),
-	(r'^technical/carpentry$', xxx),  # Gallery
+	(r'^technical/voting$', 'mcghan.views.xxx'),
+	(r'^technical/carpentry$', 'mcghan.views.xxx'),  # Gallery
 
 	# meredithmcghan.com/marketing
 
-	(r'^marketing/social-light$', xxx),
-	(r'^marketing/etsy$', xxx),
-	(r'^marketing/spa$', xxx),
-	(r'^marketing/law-firm$', xxx),
-	(r'^marketing/women$', xxx),
+	(r'^marketing/social-light$', 'mcghan.views.xxx'),
+	(r'^marketing/etsy$', 'mcghan.views.xxx'),
+	(r'^marketing/spa$', 'mcghan.views.xxx'),
+	(r'^marketing/law-firm$', 'mcghan.views.xxx'),
+	(r'^marketing/women$', 'mcghan.views.xxx'),
 	(r'^marketing/poker$', 'mmcghan.views.poker_gallery'), # Gallery...
 
 	# meredithmcghan.com/journalism
 
-	(r'^journalism/sprawl$', xxx),
-	(r'^journalism/greening$', xxx),
-	(r'^journalism/zero-energy$', xxx),
-	(r'^journalism/water-grab$', xxx),
-	(r'^journalism/nursing-home$', xxx),
-	(r'^journalism/fake-news$', xxx),
-	(r'^journalism/covers$', xxx), # Gallery....
+	(r'^journalism/sprawl$', 'mcghan.views.xxx'),
+	(r'^journalism/greening$', 'mcghan.views.xxx'),
+	(r'^journalism/zero-energy$', 'mcghan.views.xxx'),
+	(r'^journalism/water-grab$', 'mcghan.views.xxx'),
+	(r'^journalism/nursing-home$', 'mcghan.views.xxx'),
+	(r'^journalism/fake-news$', 'mcghan.views.xxx'),
+	(r'^journalism/covers$', 'mcghan.views.xxx'), # Gallery....
 
 	# meredithmcghan.com/entertainment
 
-	(r'^entertainment/radiskull$', xxx),
-	(r'^entertainment/book-review$', xxx),
-	(r'^entertainment/shows$', xxx), # Gallery...
+	(r'^entertainment/radiskull$', 'mcghan.views.xxx'),
+	(r'^entertainment/book-review$', 'mcghan.views.xxx'),
+	(r'^entertainment/shows$', 'mcghan.views.xxx'), # Gallery...
 
 	# meredithmcghan.com/commentary
 
-	(r'^commentary/flint$', xxx),
-	(r'^commentary/columns$', xxx), # Gallery...
+	(r'^commentary/flint$', 'mcghan.views.xxx'),
+	(r'^commentary/columns$', 'mcghan.views.xxx'), # Gallery...
 
 
 	# meredithmcghan.com/creativity
 
-	(r'^creativity/bus$', xxx),
-	(r'^creativity/perspectives$', xxx), # Gallery...
+	(r'^creativity/bus$', 'mcghan.views.xxx'),
+	(r'^creativity/perspectives$', 'mcghan.views.xxx'), # Gallery...
 )

@@ -47,6 +47,12 @@ def commentary(request):
     })
     return HttpResponse(t.render(c))
 
+def contact(request):
+    t = loader.get_template('contact.html')
+    c = Context({
+    })
+    return HttpResponse(t.render(c))
+
 def poker_gallery(request):
     t = loader.get_template('gallery.html')
     c = Context({

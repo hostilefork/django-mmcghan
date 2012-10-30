@@ -11,38 +11,45 @@ def index(request):
     })
     return HttpResponse(t.render(c))
 
-def technicalwriting(request):
-    t = loader.get_template('technical-writing.html')
+def technical(request):
+    t = loader.get_template('technical.html')
     c = Context({
     })
     return HttpResponse(t.render(c))
 
-def investigativejournalismandnews(request):
-    t = loader.get_template('investigative-journalism-and-news.html')
+def journalism(request):
+    t = loader.get_template('journalism.html')
     c = Context({
     })
     return HttpResponse(t.render(c))
 
-def marcommandtradepublications(request):
-    t = loader.get_template('marcomm-and-trade-publications.html')
+def marketing(request):
+    t = loader.get_template('marketing.html')
     c = Context({
     })
     return HttpResponse(t.render(c))
 
-def artsentertainmentandlifestyle(request):
-    t = loader.get_template('arts-entertainment-and-lifestyle.html')
+def entertainment(request):
+    t = loader.get_template('entertainment.html')
     c = Context({
     })
     return HttpResponse(t.render(c))
 
-def commentaryandcreativity(request):
-    t = loader.get_template('commentary-and-creativity.html')
+def creative(request):
+    t = loader.get_template('creative.html')
     c = Context({
     })
     return HttpResponse(t.render(c))
 
-def resume(request):
-    t = loader.get_template('resume.html')
+def commentary(request):
+    t = loader.get_template('commentary.html')
     c = Context({
+    })
+    return HttpResponse(t.render(c))
+
+def poker_gallery(request):
+    t = loader.get_template('gallery.html')
+    c = Context({
+    	'backgroundcolor': 'FF0000'
     })
     return HttpResponse(t.render(c))

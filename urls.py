@@ -30,42 +30,42 @@ urlpatterns = patterns('',
 
 	# meredithmcghan.com/technical
 
-	(r'^technical/voting$', 'mcghan.views.xxx'),
-	(r'^technical/carpentry$', 'mcghan.views.xxx'),  # Gallery
+	(r'^technical/voting$', 'mmcghan.views.xxx'),
+	(r'^technical/carpentry$', 'mmcghan.views.xxx'),  # Gallery
 
 	# meredithmcghan.com/marketing
 
-	(r'^marketing/social-light$', 'mcghan.views.xxx'),
-	(r'^marketing/etsy$', 'mcghan.views.xxx'),
-	(r'^marketing/spa$', 'mcghan.views.xxx'),
-	(r'^marketing/law-firm$', 'mcghan.views.xxx'),
-	(r'^marketing/women$', 'mcghan.views.xxx'),
+	(r'^marketing/social-light$', 'mmcghan.views.xxx'),
+	(r'^marketing/etsy$', 'mmcghan.views.xxx'),
+	(r'^marketing/spa$', 'mmcghan.views.xxx'),
+	(r'^marketing/law-firm$', 'mmcghan.views.xxx'),
+	(r'^marketing/women$', 'mmcghan.views.xxx'),
 	(r'^marketing/poker$', 'mmcghan.views.poker_gallery'), # Gallery...
 
 	# meredithmcghan.com/journalism
 
-	(r'^journalism/sprawl$', 'mcghan.views.xxx'),
-	(r'^journalism/greening$', 'mcghan.views.xxx'),
-	(r'^journalism/zero-energy$', 'mcghan.views.xxx'),
-	(r'^journalism/water-grab$', 'mcghan.views.xxx'),
-	(r'^journalism/nursing-home$', 'mcghan.views.xxx'),
-	(r'^journalism/fake-news$', 'mcghan.views.xxx'),
-	(r'^journalism/covers$', 'mcghan.views.xxx'), # Gallery....
+	(r'^journalism/sprawl$', 'mmcghan.views.xxx'),
+	(r'^journalism/greening$', 'mmcghan.views.xxx'),
+	(r'^journalism/zero-energy$', 'mmcghan.views.xxx'),
+	(r'^journalism/water-grab$', 'mmcghan.views.xxx'),
+	(r'^journalism/nursing-home$', 'mmcghan.views.xxx'),
+	(r'^journalism/fake-news$', 'mmcghan.views.xxx'),
+	(r'^journalism/covers$', 'mmcghan.views.xxx'), # Gallery....
 
 	# meredithmcghan.com/entertainment
 
-	(r'^entertainment/radiskull$', 'mcghan.views.xxx'),
-	(r'^entertainment/book-review$', 'mcghan.views.xxx'),
-	(r'^entertainment/shows$', 'mcghan.views.xxx'), # Gallery...
+	(r'^entertainment/radiskull$', 'mmcghan.views.xxx'),
+	(r'^entertainment/book-review$', 'mmcghan.views.xxx'),
+	(r'^entertainment/shows$', 'mmcghan.views.xxx'), # Gallery...
 
 	# meredithmcghan.com/commentary
 
-	(r'^commentary/flint$', 'mcghan.views.xxx'),
-	(r'^commentary/columns$', 'mcghan.views.xxx'), # Gallery...
+	(r'^commentary/flint$', 'mmcghan.views.xxx'),
+	(r'^commentary/columns$', 'mmcghan.views.xxx'), # Gallery...
 
 
 	# meredithmcghan.com/creativity
 
-	(r'^creativity/bus$', 'mcghan.views.xxx'),
-	(r'^creativity/perspectives$', 'mcghan.views.xxx'), # Gallery...
+	(r'^creativity/bus$', 'mmcghan.views.xxx'),
+	(r'^creativity/perspectives$', 'mmcghan.views.xxx'), # Gallery...
 )

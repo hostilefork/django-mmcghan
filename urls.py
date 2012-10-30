@@ -27,6 +27,7 @@ urlpatterns = patterns('',
 	(r'^entertainment$', 'mmcghan.views.entertainment'),
 	(r'^commentary$', 'mmcghan.views.commentary'),
 	(r'^creative$', 'mmcghan.views.creative'),
+	(r'^contact$', 'mmcghan.views.contact'),
 
 	# meredithmcghan.com/technical
 

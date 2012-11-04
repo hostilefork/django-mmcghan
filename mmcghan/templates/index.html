@@ -18,8 +18,8 @@ whole "content/context" wordplay, looking marketable and at the same time showin
 can go deeper than the heuristic approach on my own time. :)-->
 
 <p>I'm Meredith McGhan, a writer and editor with a multidisciplinary background.
-I specialize in the general -- creating "content in context" by ferreting out the most
-important information a given audience needs and crafting it into a form they'll
+I specialize in what I call <i>"content in context"</i>: ferreting out the most
+important information a given audience needs, and crafting it into a form they'll
 understand.</p>
 
 <p>As a former print-only journalist and college English teacher, I'm exploring
@@ -27,18 +27,23 @@ multimedia and other technologies as they relate to communication and education.
 See my blog <a href="http://blog.meredithmcghan.com">Phoenix from the Ink</a>
 for more on these and other topics.</p>
 
-<p>If you want to hire me for freelance or contract work, or just say hi,
-<a href="{% url 'mmcghan.views.contact' %}">here's</a> how.</p>
+<p>This website is starting out as a simple
+portfolio based on scans of my print work, and I'm trying to keep
+it as "standards-compliant HTML5".  As I learn more about CSS and how to do
+graphics on the web it should improve with the links still working.</p>
+
+<p>If you want to hire me for freelance or contract work &mdash; or just say "hi" &mdash;
+<a href="{% url contact %}">here's</a> how.</p>
 
 <!--Same script as my name. List will appear as an "accordion." I think it might be cool
 if the accordion sections appeared as book spines...-->
 <h3>Portfolio</h3>
 <ul>
-	<li><a href="{% url 'mmcghan.views.technical' %}">Technical Writing</a></li>
-	<li><a href="{% url 'mmcghan.views.journalism' %}">Investigative Journalism & News</a></li>
-	<li><a href="{% url 'mmcghan.views.marketing' %}">MarComm and Trade Publications</a></li>
-	<li><a href="{% url 'mmcghan.views.entertainment' %}">Arts, Entertainment & Lifestyle</a></li>
-	<li><a href="{% url 'mmcghan.views.commentary' %}">Commentary</a></li>
-	<li><a href="{% url 'mmcghan.views.creative' %}">Creativity</a></li>
+	<li><a href="{% url technical %}">Technical Writing</a></li>
+	<li><a href="{% url journalism %}">Investigative Journalism & News</a></li>
+	<li><a href="{% url marketing %}">Marketing and Trade Publications</a></li>
+	<li><a href="{% url entertainment %}">Arts, Entertainment & Lifestyle</a></li>
+	<li><a href="{% url commentary %}">Commentary</a></li>
+	<li><a href="{% url creative %}">Creativity</a></li>
 </ul>
 {% endblock %}

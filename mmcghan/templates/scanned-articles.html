@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% for path in paths %}
+	<div><img src="http://meredithmcghan.com/media/documents/{{ path }}.jpg" alt="{{ path }}" /></div>
+	&nbsp;
+{% endfor %}
+
+<p><i>You can use your browser's "back" button, or go <a href="{% url index %}">back to the homepage</a></i></p>
+{% endblock %}

@@ -1,10 +1,11 @@
 from django.conf.urls.defaults import *
+from django.views.generic.simple import *
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('mmcghan.views',
 	# Example:
 	# (r'^mchgan/', include('mcghan.foo.urls')),
 
@@ -15,58 +16,81 @@ urlpatterns = patterns('',
 	# Uncomment the next line to enable the admin:
 	# (r'^admin/', include(admin.site.urls)),
 
+	# https://docs.djangoproject.com/en/dev/topics/http/urls/
+	# http://stackoverflow.com/questions/10020233/url-templatetag-in-django-and-direct-to-template
+
 	# Main Index
 
-	(r'^$', 'mmcghan.views.index'),
+	url(r'^$', direct_to_template, {'template': 'index.html'}, name='index'),
 
-	# Categories
+	# Contact page
 
-	(r'^technical$', 'mmcghan.views.technical'),
-	(r'^journalism$', 'mmcghan.views.journalism'),
-	(r'^marketing$', 'mmcghan.views.marketing'),
-	(r'^entertainment$', 'mmcghan.views.entertainment'),
-	(r'^commentary$', 'mmcghan.views.commentary'),
-	(r'^creative$', 'mmcghan.views.creative'),
-	(r'^contact$', 'mmcghan.views.contact'),
+	url(r'^contact$', direct_to_template, {'template': 'contact.html'}, name='contact'),
 
-	# meredithmcghan.com/technical
+	# Redirect blog in case someone types meredithmcghan.com/blog instead of blog.meredithmcghan.com
+	# This redirect is not a named URL because we are going to a subdomain, better to link direct...
 
-	(r'^technical/voting$', 'mmcghan.views.xxx'),
-	(r'^technical/carpentry$', 'mmcghan.views.xxx'),  # Gallery
+	url(r'^blog$', redirect_to, {'url': 'http://blog.meredithmcghan.com'}),
 
-	# meredithmcghan.com/marketing
+	#
+	# meredithmcghan.com/technical/*
+	#
 
-	(r'^marketing/social-light$', 'mmcghan.views.xxx'),
-	(r'^marketing/etsy$', 'mmcghan.views.xxx'),
-	(r'^marketing/spa$', 'mmcghan.views.xxx'),
-	(r'^marketing/law-firm$', 'mmcghan.views.xxx'),
-	(r'^marketing/women$', 'mmcghan.views.xxx'),
-	(r'^marketing/poker$', 'mmcghan.views.poker_gallery'), # Gallery...
+	url(r'^technical$', direct_to_template, {'template': 'technical.html'}, name='technical'),
+	url(r'^technical/voting-restoration$', redirect_to, {'url': 'http://meredithmcghan.com/media/documents/technical/voting-restoration-nevada-2008.pdf'}, name='voting_restoration'),
+	url(r'^technical/carpentry$', 'carpentry_gallery', name='carpentry_gallery'),  # Gallery
 
-	# meredithmcghan.com/journalism
+	#
+	# meredithmcghan.com/marketing/*
+	#
 
-	(r'^journalism/sprawl$', 'mmcghan.views.xxx'),
-	(r'^journalism/greening$', 'mmcghan.views.xxx'),
-	(r'^journalism/zero-energy$', 'mmcghan.views.xxx'),
-	(r'^journalism/water-grab$', 'mmcghan.views.xxx'),
-	(r'^journalism/nursing-home$', 'mmcghan.views.xxx'),
-	(r'^journalism/fake-news$', 'mmcghan.views.xxx'),
-	(r'^journalism/covers$', 'mmcghan.views.xxx'), # Gallery....
+	url(r'^marketing$', direct_to_template, {'template': 'marketing.html'}, name='marketing'),
+	url(r'^marketing/social-light$', 'scanned_articles', {'paths': ['marketing/social-light']}, name='social_light'),
+	url(r'^marketing/etsy-artists$', 'scanned_articles', {'paths': ['marketing/etsy-artists-1', 'marketing/etsy-artists-2']}, name='etsy_artists'),
+	url(r'^marketing/pumpkin-spa$', 'scanned_articles', {'paths': ['marketing/pumpkin-spa-1', 'marketing/pumpkin-spa-2']}, name='pumpkin_spa'),
+	url(r'^marketing/practice-perfect$', 'scanned_articles', {'paths': ['marketing/practice-perfect']}, name='practice_perfect'),
+	url(r'^marketing/faith-fearlessness$', 'scanned_articles', {'paths': ['marketing/faith-fearlessness']}, name='faith_fearlessness'),
+	url(r'^marketing/industry-women$', 'scanned_articles', {'paths': ['marketing/industry-women-1', 'marketing/industry-women-2']}, name='industry_women'),
+	url(r'^marketing/sandy-campbell$', 'scanned_articles', {'paths': ['marketing/sandy-campbell']}, name='sandy_campbell'),
+	url(r'^marketing/poker$', 'poker_gallery', name='poker_gallery'), # Gallery...
 
-	# meredithmcghan.com/entertainment
+	#
+	# meredithmcghan.com/journalism/*
+	#
 
-	(r'^entertainment/radiskull$', 'mmcghan.views.xxx'),
-	(r'^entertainment/book-review$', 'mmcghan.views.xxx'),
-	(r'^entertainment/shows$', 'mmcghan.views.xxx'), # Gallery...
+	url(r'^journalism$', direct_to_template, {'template': 'journalism.html'}, name='journalism'),
+	url(r'^journalism/less-than-zero$', 'scanned_articles', {'paths': ['journalism/less-than-zero']}, name='less_than_zero'),
+	url(r'^journalism/at-what-cost$', 'scanned_articles', {'paths': ['journalism/at-what-cost']}, name='at_what_cost'),
+	url(r'^journalism/fake-news$', direct_to_template, {'template': 'journalism/fake-news.html'}, name='fake_news'),
+	url(r'^journalism/greening-vegas$', 'scanned_articles', {'paths': ['journalism/greening-vegas']}, name='greening_vegas'),
 
-	# meredithmcghan.com/commentary
+	# The cover stories are in the gallery, should they each get their own separately addressable URL?
+	# e.g. url(r'^journalism/sprawl$', 'xxx', name='sprawl'),
+	url(r'^journalism/cover-stories$', 'cover_stories_gallery', name='cover_stories_gallery'), # Gallery....
 
-	(r'^commentary/flint$', 'mmcghan.views.xxx'),
-	(r'^commentary/columns$', 'mmcghan.views.xxx'), # Gallery...
+	#
+	# meredithmcghan.com/entertainment/*
+	#
 
+	url(r'^entertainment$', direct_to_template, {'template': 'entertainment.html'}, name='entertainment'),
+	url(r'^entertainment/radiskull$', direct_to_template, {'template': 'entertainment/radiskull.html'}, name='radiskull'),
+	url(r'^entertainment/almost-freaky$', 'scanned_articles', {'paths': ['entertainment/almost-freaky']}, name='almost_freaky'),
+	url(r'^entertainment/whats-on$', 'whats_on_gallery', name='whats_on_gallery'), # Gallery...
 
-	# meredithmcghan.com/creativity
+	#
+	# meredithmcghan.com/commentary/*
+	#
 
-	(r'^creativity/bus$', 'mmcghan.views.xxx'),
-	(r'^creativity/perspectives$', 'mmcghan.views.xxx'), # Gallery...
+	url(r'^commentary$', direct_to_template, {'template': 'commentary.html'}, name='commentary'),
+	url(r'^commentary/flint$', 'scanned_articles', {'paths': ['commentary/flint']}, name='flint'),
+	url(r'^commentary/ta-confessions$', 'scanned_articles', {'paths': ['commentary/ta-confessions']}, name='ta_confessions'),
+	url(r'^commentary/slant$', 'slant_gallery', name='slant_gallery'), # Gallery...
+
+	#
+	# meredithmcghan.com/creative/*
+	#
+
+	url(r'^creative$', direct_to_template, {'template': 'creative.html'}, name='creative'),
+	url(r'^creative/waiting-bus$', 'scanned_articles', {'paths': ['creative/waiting-bus']}, name='waiting_bus'),
+	url(r'^creative/perspectives$', 'perspectives_gallery', name='perspectives_gallery'), # Gallery...
 )

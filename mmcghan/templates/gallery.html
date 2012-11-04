@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Meredith McGhan work for Las Vegas Carpenter's Union</title>
+        <title>{{ gallery_title }}</title>
         <style>
 
             /* Demo styles */
-            html,body{background:#{{ backgroundcolor }};margin:0;}
+            html,body{background:#{{ background_color }};margin:0;}
             body{border-top:4px solid #777;}
             .content{color:#999;width:800px;margin:20px auto;}
             h1{font-weight:normal;color:#ddd;margin:0;}
             p{margin:0 0 20px}
-            a {color:#e1152c;text-decoration:none;}
+            a {color:#{{ link_color }};text-decoration:none;}
             .cred{margin-top:20px;}
 
             /* This rule is read by Galleria to define the gallery height: */
@@ -28,11 +28,11 @@ right: 10px;
 }
 
 .galleria-info-text {
-	background-color: #{{ backgroundcolor }};
+	background-color: #{{ background_color }};
 }
 
 .galleria-info-link {
-	background-color: #{{ backgroundcolor }};
+	background-color: #{{ background_color }};
 	bottom: 0px;
 	right: 0px;
 }
@@ -51,7 +51,7 @@ padding:17px 12px 10px 12px;
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
         <!-- load Galleria -->
-        <script src="js/galleria-1.2.6.min.js"></script>
+        <script src="http://meredithmcghan.com/media/galleria/js/galleria-1.2.6.min.js"></script>
 
     </head>
 <body>
@@ -59,65 +59,17 @@ padding:17px 12px 10px 12px;
         <!-- Adding gallery images. We use resized thumbnails here for better performance, but it’s not necessary -->
 
         <div id="galleria">
-            <a href="images/alan-keating-cover.jpg">
-            	<img title="Freelance Work for a Poker Magazine"
-            	     alt="I was recruited to write for Great Lakes Poker and Gaming Magazine.  The company was based out of Michigan, but they wanted a Las Vegas correspondent.  I took on that role and served as a contributing editor."
-            	     src="thumbs/alan-keating-cover.jpg">
-        	</a>
-            <a href="images/poker-masthead.jpg">
-            	<img title="Writing Cover Stories and Editing"
-            	     alt="I wrote all the cover stories and edited all of the other articles that were published.  I was also responsible for bringing a photographer on board to do the pictures for my stories, and the work you see was done by <a href='http://www.linkedin.com/pub/todd-lussier/11/690/480'>Todd Lussier</a>"
-            	     src="thumbs/poker-masthead.jpg">
-        	</a>
-            <a href="images/alan-keating-1.jpg">
-                <img title="Understanding What the WSOP is Like"
-                     alt="I attended the <a href='http://www.wsop.com'>World Series of Poker</a> for the first time while writing this article. I got the ambiance of the tour and met the players, but didn't interview them until after the tournament. I wanted them to have a chance to look back on the experience, and didn't want to interrupt their focus on the game."
-                     src="thumbs/alan-keating-1.jpg">
-            </a>
-            <a href="images/alan-keating-2.jpg">
-                <img title="Interview Process"
-                     alt="After the WSOP, I spoke with the players I profiled by phone, and also communicated via email after they had returned to their home states. This gave me time to get a lot of information and reflection on their strategies."
-                     src="thumbs/alan-keating-2.jpg">
-            </a>
-            <a href="images/alan-keating-3.jpg">
-                <img title="Writing Remotely"
-                	 alt="My publisher was in Michigan, so most of our communication was via email. I would write up the stories in Word and send them as attachments."
-                     src="thumbs/alan-keating-3.jpg">
-            </a>
-            <a href="images/alan-keating-4.jpg">
-                <img title="Editing Remotely"
-                     alt="To edit the other writers, I received their work in the body of an email straight from them or the publisher. I would make revisions and send my versions to the publisher via email."
-                     src="thumbs/alan-keating-4.jpg">
-            </a>
-            <a href="images/heartland-cover.jpg">
-                <img title="Writing About An Event I Never Attended"
-                     alt="For a change of pace from Las Vegas, I covered the <a href='http://www.htpoker.com'>Heartland Poker Tour</a> TV show. I did this job remotely because the Heartland Poker Tour took place in the Midwest."
-                     src="thumbs/heartland-cover.jpg">
-            </a>
-            <a href="images/heartland-1.jpg">
-                <img title="Interviewing Remotely"
-                     alt="Working remotely was different than what I was accustomed to working for a local newspaper.  I found that people tend to be a bit more articulate over email, but more spontaneous in person."
-                     src="thumbs/heartland-1.jpg">
-            </a>
-            <a href="images/heartland-2.jpg">
-                <img title="Email Interviews Vs. In-Person Interviews"
-                	 alt="Email interviews often garner more information than needed, which reduces the need to have follow-up questions.  However, in-person interviews allow the writer to observe the subject and be more descriptive."
-                     src="thumbs/heartland-2.jpg">
-            </a>
-            <a href="images/heartland-3.jpg">
-                <img title="Remote Photography"
-                	 alt="I didn't have any collaboration with the photographer for this story. I don't think this is detrimental in general, but when there is good communication and a sense of collaboration between the writer and photographer, it can often give added cohesiveness to the story."
-                     src="thumbs/heartland-3.jpg">
-            </a>
-            <a href="images/heartland-4.jpg">
-                <img title="In Conclusion"
-                	 alt="Great Lakes Poker and Gaming Magazine was a beautiful publication. Photo, layout, and print quality were excellent, and translate well to the Web. I am proud to have been a part of the project.  <a href='http://meredithmcghan.com'>Back to Main Site</a>"
-                     src="thumbs/heartland-4.jpg">
-            </a>
+		{% for image_info in gallery_list %}
+			<a href="http://meredithmcghan.com/media/documents/{{ gallery_path }}/images/{{ image_info.filename_stem }}.jpg">
+				<img title="{{ image_info.summary }}"
+					alt="{{ image_info.blurb }}"
+					src="http://meredithmcghan.com/media/documents/{{ gallery_path }}/thumbs/{{ image_info.filename_stem }}.jpg" />
+			</a>
+		{% endfor %}
         </div>
 
         <p class="cred">Powered by <a href="http://galleria.aino.se">Galleria</a>.  To close the info box for each picture, click "x".  To open it again, click "i".<br />
-        All material here is (c) Great Lakes Poker and Gaming, excerpted only for portfolio purposes.  Do not duplicate!</p>
+        All material here is (c) {{ copyright_owner }}, excerpted only for portfolio purposes.  Do not duplicate!</p>
     </div>
 
     <script>
@@ -140,7 +92,7 @@ cantfailsign.jpg
 
 
     // Load the classic theme
-	Galleria.loadTheme('themes/galleria.classic.min.js');
+	Galleria.loadTheme('http://meredithmcghan.com/media/galleria/themes/galleria.classic.min.js');
 
 	// Initialize Galleria
 	$('#galleria').galleria({

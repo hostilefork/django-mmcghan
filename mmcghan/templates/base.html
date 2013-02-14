@@ -2,59 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-<!-- Regarding the "meta charset" above...to build good sites, how deeply must I
-understand character encoding? All I know at the moment is that it must come in the
-first 512 characters and  before content elements. All this comes from:
+<!-- Regarding the "meta charset" above...to build good sites, how deeply must I understand character encoding? All I know at the moment is that it must come in the first 512 characters and  before content elements. All this comes from:
 
     http://www.sitepoint.com/a-basic-html5-template/#fbid=kU5lgNGeCp3
-    
-As well as guidelines at www.dontfeartheinternet.com. I don't know why it is 8 or if that
-refers to text size or what.  I believe meta tags need to be *in* the head section. -->
 
-	<!--Don't Fear the Internet says the title must come after the head, but SitePoint
-	puts it after the charset and is headless. Why? (Yes, I am the Louis C.K.'s daughter 
-	of coding. BTW I put a head in anyway).-->
+As well as guidelines at www.dontfeartheinternet.com. I don't know why it is 8 or if that refers to text size or what.  I believe meta tags need to be *in* the head section. -->
+
+	<!-- Don't Fear the Internet says the title must come after the head, but SitePoint puts it after the charset and is headless. Why? (Yes, I am the Louis C.K.'s daughter of coding. BTW I put a head in anyway).-->
 	<title>{%block title %}Meredith McGhan{% endblock %}</title>
-	
+
 	<meta name="description" content="Meredith McGhan's writing">
 	<meta name="author" content="MeredithMcGhan">
-	
-	<!--Should the CSS be 3.0?
-	Here's something cool: code that makes js on my site readable in IE9. (The HTML5 shiv).-->
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<!--Why is this in note form? Do the browsers read the notes or just the humans or both?
-	Also, what about other versions of IE and other browsers that have js issues, like my 
-	archenemy Epiphany?-->
-	<link rel="stylesheet" href="css/styles.css?v=1.0">
+
+	{% block css %}
+	{% endblock %}
+
+	{% block scripts %}
+	{% endblock %}
+
 </head>
 
 <body>
-	{% block body %}
-	<p>There is no content in the body block by default, but I'm putting this explanatory
-	text here.  :)  If you were to try and use "base.html" explicitly in Django (instead 
-	of a templated file that inherits from base, such as "index.html") then you would see
-	this paragraph.  Or, if you *forget* to override block body in an inheriting
-	template, then you would see this text.  In practice, this should never happen...but
-	I'm leaving this here as an alert!!!</p>
-	{% endblock %}
-	
-	<p>
-		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
-			<img alt="Creative Commons License" style="border-width:0"
-			src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
-				
-		</a> &nbsp;
-		<a href="http://validator.w3.org/check?uri=referer">
-			<img src="http://meredithmcghan.com/media/valid-html5-button.png"
-			alt="Valid HTML5!" height="31" width="87" />
-		</a>
-	</p>
-	
-	<!--SitePoint said that whenever technically possible, you get a speed advantage
-	by putting your scripts at the bottom of the body of the page.  How important is
-	this, really?  Review. -->
+{% block body %}
+	<p>There is no content in the body block by default, but I'm putting this explanatory text here.  :)  If you were to try and use "base.html" explicitly in Django (instead  of a templated file that inherits from base, such as "index.html") then you would see this paragraph.  Or, if you *forget* to override block body in an inheriting template, then you would see this text.  In practice, this should never happen...but I'm leaving this here as an alert!!!</p>
+{% endblock %}
+
+	<!--SitePoint said that whenever technically possible, you get a speed advantage by putting your scripts at the bottom of the body of the page.  How important is this, really?  Review. -->
 	<!-- <script src="foo.js"></script> -->
 </body>
 </html>

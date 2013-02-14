@@ -1,49 +1,43 @@
-{% extends "base.html" %}
+{% extends "sidebar-base.html" %}
 
-{% block body %}
-<!--The self-portrait headshot sketch will go to the right of the paragraph text. It
-needs to be scanned and improved in PhotoShop.  Are the header elements indented for
-the computer or the humans?
-Two options:
-1.Instead of a header in text we can use a scan of my signature as an img.
-2. Use text, and when applying CSS3, make my name black cursive script using a cool
-open source font. Make the words content in context gray becoming white with a bit of
-overlap on the large signature (hello again, PhotoShop).-->
+{% block leftcolumn %}
+<h2>Welcome!</h2>
+<p>I'm a writer and editor with a multidisciplinary background. As a former print journalist and college English teacher, I've specialized in local publications (with a focus on social justice issues and the arts):</p>
 
-<h1>Meredith McGhan</h1>
-<h2>content in context</h2>
+<p><a href="{% url journalism %}">Journalism</a> &bull;
+	<a href="{% url technical %}">Technical Writing</a> &bull;
+	<a href="{% url marketing %}">Marketing Communication and Trade</a> &bull;
+	<a href="{% url entertainment %}">Arts and Entertainment</a> &bull;
+	<a href="{% url commentary %}">Commentary</a> &bull;
+	<a href="{% url creative %}">Creativity</a></p>
 
-<!--Yes, I know this "elevator pitch" may need editing. I'm taking a stab at owning the
-whole "content/context" wordplay, looking marketable and at the same time showing that I
-can go deeper than the heuristic approach on my own time. :)-->
+<p>As part of becoming more fluent in the digital medium, I've begun to delve into web development and <a href="http://blog.meredithmcghan.com">started a blog</a> about my findings.  I've also scanned in some samples of printed work I've written and edited over the years.  Click on the thumbnails below to have a look at the galleries, and feel free to <a href="{% url contact %}">contact me</a>!</p>
 
-<p>I'm Meredith McGhan, a writer and editor with a multidisciplinary background.
-I specialize in what I call <i>"content in context"</i>: ferreting out the most
-important information a given audience needs, and crafting it into a form they'll
-understand.</p>
+<table>
+	<tr>
+		<td>
+			<a href="{% url cover_stories_gallery %}"><img src="http://meredithmcghan.com/media/graphics/cover-stories-320x240.jpg" alt="Cover Stories Gallery" /></a>
+		</td>
+		<td>
+			<a href="{% url whats_on_gallery %}"><img src="http://meredithmcghan.com/media/graphics/shows-320x240.jpg" alt="What's On Gallery" /></a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url carpentry_gallery %}"><img src="http://meredithmcghan.com/media/graphics/carpentry-320x240.jpg" alt="Carpentry Gallery" /></a>
+		</td>
+		<td>
+			<a href="{% url perspectives_gallery %}"><img src="http://meredithmcghan.com/media/graphics/perspectives-320x240.jpg" alt="Perspectives Gallery" /></a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url poker_gallery %}"><img src="http://meredithmcghan.com/media/graphics/poker-320x240.jpg" alt="Poker Gallery" /></a>
+		</td>
+		<td>
+			<a href="{% url slant_gallery %}"><img src="http://meredithmcghan.com/media/graphics/slant-320x240.jpg" alt="Slant Gallery" /></a>
+		</td>
+	</tr>
+</table>
 
-<p>As a former print-only journalist and college English teacher, I'm exploring
-multimedia and other technologies as they relate to communication and education.
-See my blog <a href="http://blog.meredithmcghan.com">Phoenix from the Ink</a>
-for more on these and other topics.</p>
-
-<p>This website is starting out as a simple
-portfolio based on scans of my print work, and I'm trying to keep
-it as "standards-compliant HTML5".  As I learn more about CSS and how to do
-graphics on the web it should improve with the links still working.</p>
-
-<p>If you want to hire me for freelance or contract work &mdash; or just say "hi" &mdash;
-<a href="{% url contact %}">here's</a> how.</p>
-
-<!--Same script as my name. List will appear as an "accordion." I think it might be cool
-if the accordion sections appeared as book spines...-->
-<h3>Portfolio</h3>
-<ul>
-	<li><a href="{% url technical %}">Technical Writing</a></li>
-	<li><a href="{% url journalism %}">Investigative Journalism & News</a></li>
-	<li><a href="{% url marketing %}">Marketing and Trade Publications</a></li>
-	<li><a href="{% url entertainment %}">Arts, Entertainment & Lifestyle</a></li>
-	<li><a href="{% url commentary %}">Commentary</a></li>
-	<li><a href="{% url creative %}">Creativity</a></li>
-</ul>
 {% endblock %}

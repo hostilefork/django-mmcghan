@@ -27,6 +27,10 @@ urlpatterns = patterns('mmcghan.views',
 
 	url(r'^contact$', direct_to_template, {'template': 'contact.html'}, name='contact'),
 
+	# Credits page
+
+	url(r'^credits$', direct_to_template, {'template': 'credits.html'}, name='credits'),
+
 	# Redirect blog in case someone types meredithmcghan.com/blog instead of blog.meredithmcghan.com
 	# This redirect is not a named URL because we are going to a subdomain, better to link direct...
 
@@ -48,8 +52,7 @@ urlpatterns = patterns('mmcghan.views',
 	url(r'^marketing/social-light$', 'scanned_articles', {'paths': ['marketing/social-light']}, name='social_light'),
 	url(r'^marketing/etsy-artists$', 'scanned_articles', {'paths': ['marketing/etsy-artists-1', 'marketing/etsy-artists-2']}, name='etsy_artists'),
 	url(r'^marketing/pumpkin-spa$', 'scanned_articles', {'paths': ['marketing/pumpkin-spa-1', 'marketing/pumpkin-spa-2']}, name='pumpkin_spa'),
-	url(r'^marketing/practice-perfect$', 'scanned_articles', {'paths': ['marketing/practice-perfect']}, name='practice_perfect'),
-	url(r'^marketing/faith-fearlessness$', 'scanned_articles', {'paths': ['marketing/faith-fearlessness']}, name='faith_fearlessness'),
+	url(r'^marketing/be-magazine$', 'scanned_articles', {'paths': ['marketing/be-cover', 'marketing/faith-fearlessness', 'marketing/practice-perfect']}, name='be_magazine'),
 	url(r'^marketing/industry-women$', 'scanned_articles', {'paths': ['marketing/industry-women-1', 'marketing/industry-women-2']}, name='industry_women'),
 	url(r'^marketing/sandy-campbell$', 'scanned_articles', {'paths': ['marketing/sandy-campbell']}, name='sandy_campbell'),
 	url(r'^marketing/poker$', 'poker_gallery', name='poker_gallery'), # Gallery...
@@ -93,4 +96,10 @@ urlpatterns = patterns('mmcghan.views',
 	url(r'^creative$', direct_to_template, {'template': 'creative.html'}, name='creative'),
 	url(r'^creative/waiting-bus$', 'scanned_articles', {'paths': ['creative/waiting-bus']}, name='waiting_bus'),
 	url(r'^creative/perspectives$', 'perspectives_gallery', name='perspectives_gallery'), # Gallery...
+
+	#
+	# experiment
+	#
+
+	url(r'^experiment\.php/(?P<number>\d{4})/$', 'experiment'),
 )

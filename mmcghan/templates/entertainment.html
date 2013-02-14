@@ -1,47 +1,22 @@
-{% extends "base.html" %}
+{% extends "sidebar-base.html" %}
 
 {% block title %}Meredith's Arts, Entertainment & Lifestyle{% endblock %}
 
-{% block body %}
-<!--All the links referenced under the header will have to be created as none of
-these stories are online anywhere.-->
+{% block leftcolumn %}
+<h1>Arts and Entertainment</h1>
 
-<p>Active sub-URLs are:
-<ul>
-<li><a href="{% url radiskull %}">/radiskull</a></li>
-<li><a href="{% url almost_freaky %}">/almost-freaky</a></li>
-<li><a href="{% url whats_on_gallery %}">/whats-on</a></li>
-</ul>
-</p>
+<h2>Arts and Entertainment Writing</h2>
+<p>My academic background includes courses on performance art and literary symbolism. On my own, I've delved into diverse reading material in topics like world mythology, science, and artistic movements. This reading has given me a natural inclination to see patterns in artistic creations, and situate current arts in a theoretical and historical context.</p>
+<p><i>What's On: The Las Vegas Guide</i> was a free, slick-paper guide to arts, entertainment, and leisure activities in the Las Vegas area. It provided a detailed look at shows on the Vegas Strip, restaurants, state parks, and other local attractions. Click on the link below for samples of my freelance work for <i>What's On</i>.</p>
+<p><a href="{% url whats_on_gallery %}">Blue Man Group and Mystere stories</a><p>
+<h2>Internet Writing</h2>
+<p>Back in 2001 when I was still relatively new at freelancing, I landed a gig writing for Zap2it.com, one of the first online entertainment digests. I wrote a vast number of capsule reviews for them and a number of features. My favorite of these was an interview with the creator of one of the first webtoons and originator of one of the first Internet memes.</p>
+<p>Memes are ideas that proliferate and replicate with changes when they are passed from person to person. Internet memes&mdash;catchphrases that spread online&mdash;are the fastest-spreading of all. You've probably heard some of them: "All your base are belong to us!" "I can has cheeseburger." "It's time to kick it now!"</p>
+<p>Webtoons, or cartoons made for the Internet, are a rich source of these memes. One of the early ones was "Radiskull and Devil Doll", created in Flash by Macromedia animator <a href="http://joesparks.com">Joe Sparks</a>. The show featured a punk-rock disembodied skull and his cute little devil sidekick. Every episode ended with the announcement that it was time for the pair to "kick it"&mdash;which meant that they performed a catchy song. (Now you know where the phrase came from, if you didn't before.)</p>
+<p>I interviewed Sparks, who seemed on the brink of a promising career as a webtoon animator. Click on the link below if you're interested in reading the interview.</p>
+<p><a href="{% url radiskull %}">Radiskull and Devil Doll Kick It Some More</a></p>
+<p>The show was quite popular. One of the most interesting things about "Radiskull and Devil Doll" was that it garnered a huge fan base whose members made a massive amount of tribute material&mdash;costumes, dolls, tattoos, art, and more.</p>
+<p>Unfortunately, about six months after my interview with Sparks, he was let go in a massive layoff. The company owned the copyright to the 'toon, and blocked its creator from doing anything more with it. Its fate is one of many examples of how copyright law can actually disenfranchise the originator of an idea&mdash;a subject I'll address at greater length in an upcoming blog post.</p>
 
-<h1>Arts, Entertainment, & Lifestyle</h1>
-<p>I started my career as an arts and entertainment writer, and I've included a few of
-the most fun reviews I ever had the pleasure to write in those early days. If I have to
-pick an all-time early favorite, though, it'd have to be the story on a Flash animation
-series which was one of the earliest on the Internet:
-<a href="http://meredithmcghan.com/arts-entertainment-and-lifestyle/radiskull">"Radiskull and Devil Doll."</a>
-I even had a Candy Angel t-shirt, which I wore until the decal cracked and faded into
-oblivion:</p>
 
-<img src="http://meredithmcghan.com/media/candy-angel.jpg" alt="picture of the candy angel character" />
-
-<p>However, I always identified more with Radiskull, since without frequent cups of
-coffee (boiling hot!) he is prone to narcolepsy, and without caffeine none of this &mdash;
-or anything of mine &mdash; would have been written. I also
-<a href="http://youtube.com/watch?v=q1Wi0bV6hgs">hate snow</a></p>
-
-<p>Living and writing in Las Vegas for several years, I had many opportunities to see
-some pretty awesome shows. Of all the shows on the Strip, the
-<a href="http://meredithmcghan.com/arts-entertainment-and-lifestyle/blue-man-group">Blue Man Group</a>
-and the offerings of Cirque du Soleil, such as
-<a href="http://meredithmcghan.com/arts-entertainment-and-lifestyle/mystere">Mystere,</a>
-were my favorites.</p>
-
-<p>As a contributing editor for two lifestyle startup magazines,
-<a href="http://meredithmcghan.com/arts-entertainment-and-lifestyle/belifestyle"><i>Business Executive Lifestyle</i></a>
-and the suburban versions of Las Vegas'
-<a href="http://meredithmcghan.com/arts-entertainment-and-lifestyle/whats-on"><i>What's On!</i></a>,
-I wrote copy, hired freelancers and assigned pieces to them, and copyedited other writers'
-work. I helped plan the editorial calendar, and even picked up a bit of graphic design
-knowledge along the way.</p>
 {% endblock %}

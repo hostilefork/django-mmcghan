@@ -70,23 +70,23 @@ def cover_stories_gallery(request):
     	},{
     	    'filename_stem': 'homeless-1',
     		'summary': 'Genesis of the Idea',
-    		'blurb': "This was my first cover story for <i>CityLife</i>, after getting hired as a full-time staff member. Then-editor <a href='http://www.beneaththeneon.com/bio.asp'>Matt O'Brien</a>, an activist on behalf of the Las Vegas homeless, was aware that the small neighboring city of Henderson had a sizeable homeless population."
+    		'blurb': "This was my first cover story for <i>CityLife</i>, after getting hired as a full-time staff member. The small neighboring city of Henderson had a sizeable homeless population. My editor asked me to delve into the problem and see how bad it was."
     	},{
     	    'filename_stem': 'homeless-2',
     		'summary': 'The Questions',
-    		'blurb': "Matt asked me to delve into the problem and see how bad it was. How many homeless people lived in Henderson and how did the city help them? I visited the Salvation Army there and found subjects for ad-hoc 'man on the street' interviews. Photographer <a href='http://www.linkedin.com/pub/bill-hughes/13/4a4/508'>Bill Hughes</a> snapped photos as I spoke with people seeking help from the organization. Over the two weeks I had to write the story, I also interviewed homeless advocates and social service providers regarding local resources."
+    		'blurb': "How many homeless people lived in Henderson and how did the city help them? I visited the Salvation Army there and found subjects for ad-hoc 'man on the street' interviews. Over the two weeks I had to write the story, I also interviewed homeless advocates and social service providers regarding local resources."
     	},{
     	    'filename_stem': 'homeless-3',
     		'summary': 'Being in the Trenches',
-    		'blurb': "My natural empathy makes it easy for me to work with interviewing the homeless, or <a href='http://meredithmcghan.com/media/documents/voting-restoration-nevada-2008.pdf'>helping ex-felons reconnect with society</a>.  <i>CityLife</i>'s staff was also committed to journalism as local activism, and I was glad to be a part of that and to raise awareness in the community about these issues. A few years later, as a columnist, I <a href='http://archives.lasvegascitylife.com/articles/2006/07/27/opinion/all_tomorrows_parties/atp.txt'>revisited</a> the topic."
+    		'blurb': "My natural empathy makes it easy for me to work with interviewing the homeless, or <a href='http://meredithmcghan.com/media/documents/voting-restoration-nevada-2008.pdf'>helping ex-felons reconnect with society</a>. I was glad to raise awareness in the community about homelessness, a major issue in Southern Nevada. A few years later, as a columnist, I <a href='http://archives.lasvegascitylife.com/articles/2006/07/27/opinion/all_tomorrows_parties/atp.txt'>revisited</a> the topic."
     	},{
     	    'filename_stem': 'schools-out-cover',
     		'summary': 'Investigating the Home Schooling Movement',
-    		'blurb': "My second cover story for <i>CityLife</i> called for a unique combination of empathy and detachment.  I interviewed four families who had chosen to home-school their children, for a variety of reasons...both religious and secular."
+    		'blurb': "My second cover story for <i>CityLife</i> called for a unique combination of diplomacy and detachment.  I interviewed four families who had chosen to home-school their children, for a variety of reasons...both religious and secular."
     	},{
     	    'filename_stem': 'schools-out-1',
     		'summary': "Nevada's School System",
-    		'blurb': "Nevada public schools ranked 49th in the nation, which was a large impetus for parents to seek alternatives.  I'd never met a parent in Las Vegas who was happy with their child's education, unless they went to private school.  So interviewing home schoolers was eye-opening."
+    		'blurb': "Nevada public schools ranked 47th out of 51 states (including DC) in per-pupil spending, which was a large impetus for parents to seek alternatives.  I'd never met a parent in Las Vegas who was happy with their child's education, unless they went to private school.  So interviewing home schoolers was eye-opening."
     	},{
     	    'filename_stem': 'schools-out-2',
     		'summary': 'A Delicate Balance',
@@ -94,7 +94,7 @@ def cover_stories_gallery(request):
     	},{
     	    'filename_stem': 'schools-out-3',
     		'summary': 'An Interesting Challenge',
-    		'blurb': "I sympathized with the parents' desire to keep their kids out of a one-size-fits-all, lockstep educational system. However, I believe strongly that all students should learn STEM subjects and critical thinking skills. Writing this story with appropriate journalistic objectivity called for diplomacy, and an anthropological approach to the home schooling subculture."
+    		'blurb': "I sympathized with the parents' desire to keep their kids out of a one-size-fits-all, lockstep educational system. However, I believe strongly that all students should learn STEM subjects and critical thinking skills. An objective mindset was called for, so I put on my anthropologist's hat (my undergraduate major) and approached the home schooling community as a subculture."
     	},{
     	    'filename_stem': 'schools-out-4',
     		'summary': 'Responses and Follow-Up',
@@ -106,11 +106,11 @@ def cover_stories_gallery(request):
     	},{
     	    'filename_stem': 'nursinghome-1',
     		'summary': 'Working With a Lack of All Needed Sources',
-    		'blurb': "It was difficult writing this article, because none of the nursing homes would allow their public relations people to speak with me.  The refusal of nursing home representatives to grant interviews made this article more biased than I would have liked. It also made them look bad in the eyes of the community."
+    		'blurb': "It was difficult writing this article, because none of the nursing homes would allow their public relations people to speak with me.  The refusal of nursing home representatives to grant interviews made this article more biased than I would have liked and delayed publication. It also made the nursing homes look bad in the eyes of the community."
     	},{
     	    'filename_stem': 'nursinghome-2',
     		'summary': 'Sources All Took One Side',
-    		'blurb': "I think it's important for journalists to perform due diligence in attempting to contact sources who can give a variety of perspectives on issues.  This is especially true when they are serious allegations that health industry professionals have allowed a patient in their care to die."
+    		'blurb': "I think it's important for journalists to perform due diligence in attempting to contact sources who can give a variety of perspectives.  This is especially true when there are serious allegations that health industry professionals have allowed a patient in their care to die."
     	},{
     	    'filename_stem': 'nursinghome-3',
     		'summary': 'Dealing With Uncommunicative Sources',
@@ -150,11 +150,11 @@ def poker_gallery(request):
     	'gallery_list': [{
     		'filename_stem': 'alan-keating-cover',
     		'summary': 'Freelance Work for a Poker Magazine',
-    		'blurb': "I was recruited to write for Great Lakes Poker and Gaming Magazine.  The company was based out of Michigan, but they wanted a Las Vegas correspondent.  I took on that role and served as a contributing editor."
+    		'blurb': "I was recruited to write for Great Lakes Poker and Gaming Magazine.  The company was based out of Michigan, but they wanted a Las Vegas correspondent.  I took on that role and also served as a contributing editor."
     	},{
     		'filename_stem': 'poker-masthead',
     		'summary': 'Writing Cover Stories and Editing',
-    		'blurb': "I wrote all the cover stories and edited all of the other articles that were published.  I was also responsible for bringing a photographer on board to do the pictures for my stories, and the work you see was done by <a href='http://www.linkedin.com/pub/todd-lussier/11/690/480'>Todd Lussier</a>"
+    		'blurb': "I wrote all the cover stories and edited all of the other articles that were published.  I was also responsible for bringing a photographer on board to take the pictures for my stories."
 		},{
     		'filename_stem': 'alan-keating-1',
     		'summary': 'Understanding What the WSOP is Like',
@@ -162,7 +162,7 @@ def poker_gallery(request):
 		},{
     		'filename_stem': 'alan-keating-2',
     		'summary': 'Interview Process',
-    		'blurb': "After the WSOP, I spoke with the players I profiled by phone, and also communicated via email after they had returned to their home states. This gave me time to get a lot of information and reflection on their strategies."
+    		'blurb': "After the WSOP, I spoke with the players I profiled by phone, and also communicated via email after they had returned to their home states. This gave me time to get a lot of information about the tournament, and their reflections on their strategies."
 		},{
     		'filename_stem': 'alan-keating-3',
     		'summary': 'Writing Remotely',
@@ -174,11 +174,11 @@ def poker_gallery(request):
 		},{
     		'filename_stem': 'heartland-cover',
     		'summary': 'Writing About An Event I Never Attended',
-    		'blurb': "For a change of pace from Las Vegas, I covered the <a href='http://www.htpoker.com'>Heartland Poker Tour</a> TV show. I did this job remotely because the Heartland Poker Tour took place in the Midwest."
+    		'blurb': "For a change of pace from Las Vegas, I covered the <a href='http://www.htpoker.com'>Heartland Poker Tour</a> TV show. I did this entire job remotely because the Heartland Poker Tour took place across the Midwest."
 		},{
     		'filename_stem': 'heartland-1',
     		'summary': 'Interviewing Remotely',
-    		'blurb': "Working remotely was different than what I was accustomed to working for a local newspaper.  I found that people tend to be a bit more articulate over email, but more spontaneous in person."
+    		'blurb': "Working remotely was different than what I was accustomed to working for a local newspaper.  I found that there is a trade-off because people tend to be a bit more articulate over email, but more spontaneous in person."
 		},{
     		'filename_stem': 'heartland-2',
     		'summary': 'Email Interviews Vs. In-Person Interviews',
@@ -211,7 +211,7 @@ def whats_on_gallery(request):
     	'gallery_list': [{
     		'filename_stem': 'blueman-cover',
     		'summary': "Working for What's On",
-    		'blurb': "Through networking, I met then-editor <a href='http://www.linkedin.com/pub/lyn-collier/6/6a3/707'>Lyn Collier</a> of <a href='link'>What's On: The Las Vegas Guide</a> shortly after moving to the city. The magazine was a free, slick-paper publication that could be found in entertainment venues all over town. It provided complete listings of Las Vegas' most popular shows, restaurants, and other leisure activities. I submitted writing samples and Lyn asked me to review the Blue Man Group for the cover story."
+    		'blurb': "Through networking, I met the editor of <a href='link'>What's On: The Las Vegas Guide</a> shortly after moving to the city. The magazine was a free, slick-paper publication that could be found in entertainment venues all over town. It provided complete listings of Las Vegas' most popular shows, restaurants, and other leisure activities. I submitted writing samples and was asked to review the Blue Man Group for the cover story."
     	},{
     	    'filename_stem': 'blueman-1',
     		'summary': 'Writing the Blue Man Cover Story',
@@ -235,7 +235,7 @@ def whats_on_gallery(request):
     	},{
     	    'filename_stem': 'whatson-masthead',
     		'summary': "Taking a Full-Time Editorial Position at What's On",
-    		'blurb': "After I had been working at Las Vegas <i>CityLife</i> for just over a year, <i>What's On</i> editor Lyn Collier called me to say the magazine was expanding, with two sister publications focusing on entertainment in the outlying communities of Henderson and Summerlin. She offered me the position of arts editor. My duties for that position included writing stories, managing the events calendar, hiring freelancers, copyediting, and assisting with production."
+    		'blurb': "After I had been working at Las Vegas <i>CityLife</i> for just over a year, <i>What's On</i> editor called me to say the magazine was expanding, with two sister publications focusing on entertainment in the outlying communities of Henderson and Summerlin. I was  offered the position of arts editor. My duties for that position included writing stories, managing the events calendar, hiring freelancers, copyediting, and assisting with production."
     	}]
     })
     return HttpResponse(t.render(c))
@@ -260,7 +260,7 @@ def perspectives_gallery(request):
     	},{
     	    'filename_stem': 'poetry-1',
     		'summary': "'Glamour Shots'",
-    		'blurb': "I dislike having my picture taken and don't consider myself photogenic. A disgruntled reader wrote to complain about my 'glamour shots', but <i>CityLife</i>'s photographer Bill Hughes did a great job making me look good. (I was also wearing more makeup than I have worn since). I also received a compliment from Hunter S. Thompson, who told my editor, who was a friend of his, that he thought I was hot. 'What did he say about my writing?' I asked. 'Nothing,' Matt replied."
+    		'blurb': "I dislike having my picture taken and don't consider myself photogenic. A disgruntled reader wrote to complain about my 'glamour shots', but <i>CityLife</i>'s photographer Bill Hughes did a great job making me look good. (I was also wearing more makeup than I have worn since). I also received a compliment from Hunter S. Thompson, who told my editor, who was a friend of his, that he thought I was hot, but apparently had nothing to say about my writing. You may judge for yourself."
     	},{
     	    'filename_stem': 'poetry-2',
     		'summary': 'Being Good at Different Forms of Writing',
@@ -324,3 +324,9 @@ def scanned_articles(request, paths=[]):
 		'paths': paths
 	});
 	return HttpResponse(t.render(c))
+
+def experiment(request, number="0"):
+	result = ""
+	for value in range(0, int(number)):
+   		result = result + "<p>Hello!</p>"
+	return HttpResponse(result)

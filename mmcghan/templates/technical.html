@@ -1,31 +1,15 @@
-{% extends "base.html" %}
+{% extends "sidebar-base.html" %}
 
 {% block title %}Meredith's Technical Writing{% endblock %}
 
-{% block body %}
-
-<p>Active sub-URLs are:
-<ul>
-<li><a href="{% url voting_restoration %}">/voting-restoration</a></li>
-<li><a href="{% url carpentry_gallery %}">/carpentry</a></li>
-</ul>
-</p>
+{% block leftcolumn %}
 
 <h1>Technical Writing</h1>
-<p>Most of my technical writing has been for the construction and manufacturing
-industries, with forays here and there into other subjects. For me, domain matters
-less than access to knowledgeable experts and research materials, as well as awareness
-of who the audience is and the final form and use of the deliverables.</p>
+<p>Most of my technical writing has been for the construction and manufacturing industries, with forays here and there into other subjects. For me, domain matters less than access to knowledgeable experts and research materials, as well as awareness of who the audience is and the final form and use of the deliverables.</p>
 
-<p>A selection of pages from this <a href="http://meredithmcghan.com/media/shared/carpentry">manual</a>
-for carpenters is representative of textbooks I wrote for union apprentices.</p>
-
-<!--When adding CSS3, change the way these are linked. There will be a thumbnail, img
-undecided. Maybe carpentry clip art. Click on it to link to the slideshow.-->
-<p>While working for the <a href="http://planevada.com">Progressive Leadership Alliance of Nevada (PLAN)</a>,
-I wrote a document that described the experiences in restoring voting rights to ex-felons who had been
-honorably discharged.  It outlines the program's successes and challenges, and makes recommendations for
-how the state could improve the process in the future:
-<a href="http://meredithmcghan.com/media/documents/voting-restoration-nevada-2008.pdf">
-	Voting Rights Restoration in Nevada 2008 (PDF)</a></p>
+<p>This manual for carpenters is representative of textbooks I wrote for union apprentices. Click on the link below to see a selection of pages.</p>
+<a href="{% url carpentry_gallery %}">Selections from carpentry manual</a>
+<!--When adding CSS3, change the way these are linked. There will be a thumbnail, img undecided. Maybe carpentry clip art. Click on it to link to the slideshow.-->
+<p>While working for the <a href="http://planevada.com">Progressive Leadership Alliance of Nevada (PLAN)</a>, I wrote a document that described the experiences in restoring voting rights to ex-felons who had been honorably discharged.  It outlines the program's successes and challenges, and makes recommendations for how the state could improve the process in the future. Click on the link below to read.</p>
+<a href="{% url voting_restoration %}">Report on ex-felon voter restoration</a>
 {% endblock %}

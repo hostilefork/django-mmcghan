@@ -1,17 +1,15 @@
-{% extends "base.html" %}
+{% extends "sidebar-base.html" %}
 
 {% block title %}Creative{% endblock %}
 
-{% block body %}
+{% block leftcolumn %}
 
-<p>Active sub-URLs are:
-<ul>
-<li><a href="{% url waiting_bus %}">/waiting-bus</a></li>
-<li><a href="{% url perspectives_gallery %}">/perspectives</a></li>
-</ul>
-</p>
-
-<h1>Creative</h1>
-<p>To be written...</p>
+<h1>Creative Writing</h1>
+<p>A love of reading stories quickly grew into a desire to write them when I was still a young child. I received encouragement in high school when I placed high two years in a row in the National Scholastic Writing Awards&mdash;second prize in 10th grade and honorable mention in eleventh, out of roughly 20,000 entries from students across the country.<p>
+<p>While a student UNLV's Creative Writing MFA Program, I studied fiction with Douglas Unger and poetry with Aliki Barnstone and Mark Irwin. I had poetry published in the literary magazines <i>Many Mountains Moving</i> and <i>Red Rock Review</i>. I also won first place in both the fiction and poetry categories of the Las Vegas <i>CityLife</i> poetry and fiction contest. Click the link below to read my winning entries.</p>
+<p><a href="{% url perspectives_gallery %}">Winning story and poem</a></p>
+<p>This success led to a productive working relationship with <i>CityLife</i> which lasted several years, throughout a number of editorial personnel changes. Here's another short story I wrote as a staffer there:</p>
+<p><a href="{% url waiting_bus %}">"Waiting for the Bus"</a></p>
+<p>I've turned my creative focus to writing songs and novels over the last few years, but I admit I'm more perfectionistic than I am prolific. These ongoing efforts are yet to be placed online. One of my goals is to showcase more current creative work here. In the meantime, I hope you enjoy this small sample.<p>
 
 {% endblock %}

@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block css %}
+	<!--Should the CSS be 3.0?
+	Here's something cool: code that makes js on my site readable in IE9. (The HTML5 shiv).-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--Why is this in note form? Do the browsers read the notes or just the humans or both? Also, what about other versions of IE and other browsers that have js issues, like my archenemy Epiphany?-->
+	<link rel="stylesheet" href="http://meredithmcghan.com/media/css/screen.css?reload">
+
+	<!-- Some of these overrides are from
+	http://www.dynamicdrive.com/style/layouts/item/css-liquid-layout-22-fluid-fixed/ -->
+	<style type="text/css">
+
+	/* why does screen.css put margins on the img tag, and 90% font size?!  override that. */
+	img {
+		margin:0px 0 0px;
+	}
+	body {
+		font-size: 100%;
+	}
+
+	#header{
+	background: black;
+	color: #FFFFFF;
+	}
+
+	#footer{
+	clear: left;
+	width: 100%;
+	background: black;
+	color: #FFF;
+	text-align: center;
+	padding: 4px 0;
+	}
+
+	/* http://theodorakis.net/tablecentertest.html */
+	table
+	{
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	body
+	{
+	background: black;
+	min-width: 1000px;
+	}
+
+	.col1
+	{
+	background: white;
+	}
+
+	/* https://groups.google.com/forum/?fromgroups=#!topic/google-ajax-search-api/VaCK_0pN-1E */
+    .gf-result .gf-title
+    {
+      height: auto !important;
+    }
+
+    #bloglogo
+    {
+    background-color: #979795;
+
+	/* http://stackoverflow.com/questions/12753108/how-do-i-vertically-center-and-crop-my-image-using-overflow-hidden */
+    background-image:url(http://meredithmcghan.com/media/blog-banner.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:auto 110px;
+    height: 110px;
+    }
+
+    #blogheader
+	{
+	margin-top: 20px;
+	}
+
+	</style>
+{% endblock %}
+
+	{% block scripts %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// http://anjaanblog.blogspot.com/2012/03/recent-posts-widget-for-tumblr.html
+// Grab, Parse, Display
+google.load("feeds", "1");
+function OnLoad() {
+var feedControl = new google.feeds.FeedControl();
+//Number of Entries
+feedControl.setNumEntries(5);
+feedControl.addFeed("http://blog.meredithmcghan.com/rss");
+feedControl.draw(document.getElementById("recentPosts"));
+}
+google.setOnLoadCallback(OnLoad);
+</script>
+	{% endblock %}
+
+{% block body %}
+	<div id="header">
+<img src="http://meredithmcghan.com/media/header-typography.png" alt="Meredith McGhan" /></div>
+
+<div class="colmask rightmenu">
+	<div class="colleft">
+		<div class="col1">
+			<!-- Column 1 start -->
+			{% block leftcolumn %}
+	<p>There is no content in the left column by default, but I'm putting this explanatory text here.  :)  If you were to try and use "base.html" explicitly in Django (instead  of a templated file that inherits from base, such as "index.html") then you would see this paragraph.  Or, if you *forget* to override block body in an inheriting template, then you would see this text.  In practice, this should never happen...but I'm leaving this here as an alert!!!</p>
+			{% endblock %}
+			<!-- Column 1 end -->
+		</div>
+		<div class="col2">
+			<!-- Column 2 start -->
+
+			<div id="blogheader"><a href="http://blog.meredithmcghan.com"><div id="bloglogo"></div></a></div>
+
+			<div id="recentPosts"><p>Loading...</p></div>
+			<!-- Column 2 end -->
+		</div>
+	</div>
+</div>
+<div id="footer">
+			<div><p>(c) 2012 Meredith McGhan&nbsp;&bull;&nbsp;<a href="{% url credits %}">Site Credits</a></p></div>
+			<div><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">
+			<img alt="Creative Commons License" style="border-width:0"
+			src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a> &nbsp;
+		<a href="http://validator.w3.org/check?uri=referer">
+			<img src="http://meredithmcghan.com/media/valid-html5-button.png"
+			alt="Valid HTML5!" height="31" width="87" />
+		</a></div>
+</div>
+{% endblock %}

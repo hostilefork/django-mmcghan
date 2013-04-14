@@ -278,6 +278,39 @@ def perspectives_gallery(request):
     return HttpResponse(t.render(c))
 
 
+def branding_gallery(request):
+    t = loader.get_template('gallery.html')
+    c = Context({
+    	'background_color': '181a11',
+    	'link_color': 'c84f30',
+    	'gallery_path': 'creative/branding',
+    	'copyright_owner': 'Meredith McGhan',
+    	'gallery_title': 'Meredith McGhan Personal Branding Project',
+    	'gallery_list': [{
+    		'filename_stem': 'branding-1',
+    		'summary': 'Phoenix from the Ink of Print Journalism',
+    		'blurb': "When thinking about my own personal brand, I started with the idea of how it felt to be making a website and learning so much new stuff.  I felt like a phoenix, and like my phoenix here, a bit frustrated.  :-)"
+    	},{
+    	    'filename_stem': 'branding-2',
+    		'summary': "Personal Logotype Idea: M2",
+    		'blurb': "Because of how much of a reinvention working with HTML and CSS was, I started thinking like it was Meredith II <i>(the revenge!)</i>.  So I started playing with variations of M2 and Mc^2.  A graphic designer friend advised me to avoid drawing comparisons to relativity unless I planned on becoming a physicist, so I scratched this idea."
+    	},{
+    	    'filename_stem': 'branding-3',
+    		'summary': "More Experimental Typography",
+    		'blurb': "As I settled on a mark that was just a stylized letter M, I experimented with how to write my name.  I thought it was important to have an original look instead of a stock font.  But the same graphic designer told me that being 'gimmicky' with type should serve a communicative purpose, so I set this art project aside for more important things...and used a stock font."
+    	},{
+    	    'filename_stem': 'branding-4',
+    		'summary': "The Phoenix from the Ink",
+    		'blurb': "Ink on the old newspaper clippings was getting all over my hands while scanning.  I remarked about being liberated from the tyranny of paper, my friend with the scanner said 'more importantly you're being liberated from this INK.  maybe you should call your site inkyphoenix.com'  It was a silly name but a good concept, so I started drawing it."
+    	},{
+    	    'filename_stem': 'branding-5',
+    		'summary': "A Vision for a Site Theme",
+    		'blurb': "Combining these, I had a vision put together for how I would ultimately create a theme for the site and position myself: <i>a former print journalist and writer who could bridge understanding with those using modern technology</i>.  It's too early in figuring out the structure and flow of the HTML and CSS to try and invest a lot of time in graphics, but this is where I'm ultimately headed!"
+    	}]
+    })
+    return HttpResponse(t.render(c))
+
+
 #
 # COMMENTARY
 #

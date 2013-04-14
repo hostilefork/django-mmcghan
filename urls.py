@@ -96,7 +96,8 @@ urlpatterns = patterns('mmcghan.views',
 	url(r'^creative$', direct_to_template, {'template': 'creative.html'}, name='creative'),
 	url(r'^creative/waiting-bus$', 'scanned_articles', {'paths': ['creative/waiting-bus']}, name='waiting_bus'),
 	url(r'^creative/perspectives$', 'perspectives_gallery', name='perspectives_gallery'), # Gallery...
-
+	url(r'^creative/branding$', 'branding_gallery', name='branding_gallery'), # Gallery...
+	
 	#
 	# experiment
 	#

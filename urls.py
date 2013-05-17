@@ -102,6 +102,11 @@ urlpatterns = patterns('mmcghan.views',
 	# meredithmcghan.com/advocacy/*
 	#
 	url(r'^advocacy/outreach$', direct_to_template, {'template': 'advocacy/outreach.html'}, name='nonprofit_outreach'),
+
+	#
+	# meredithmcghan.com/for-sale/*
+	#
+	url(r'^for-sale/2005-saturn-ion$', direct_to_template, {'template': 'for-sale/2005-saturn-ion.html'}, name='for_sale_2005_saturn_ion'),
 	
 	#
 	# experiment

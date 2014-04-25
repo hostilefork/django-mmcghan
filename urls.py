@@ -1,5 +1,5 @@
-from django.conf.urls.defaults import *
-from django.views.generic.simple import *
+from django.conf.urls import *
+from django.views.generic import TemplateView, RedirectView
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -21,34 +21,34 @@ urlpatterns = patterns('mmcghan.views',
 
 	# Main Index
 
-	url(r'^$', direct_to_template, {'template': 'index.html'}, name='index'),
+	url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
 
 	# Contact page
 
-	url(r'^contact$', direct_to_template, {'template': 'contact.html'}, name='contact'),
+	url(r'^contact$', TemplateView.as_view(template_name='contact.html'), name='contact'),
 
 	# Credits page
 
-	url(r'^credits$', direct_to_template, {'template': 'credits.html'}, name='credits'),
+	url(r'^credits$', TemplateView.as_view(template_name='credits.html'), name='credits'),
 
 	# Redirect blog in case someone types meredithmcghan.com/blog instead of blog.meredithmcghan.com
 	# This redirect is not a named URL because we are going to a subdomain, better to link direct...
 
-	url(r'^blog$', redirect_to, {'url': 'http://blog.meredithmcghan.com'}),
+	url(r'^blog$', RedirectView.as_view(url='http://blog.meredithmcghan.com')),
 
 	#
 	# meredithmcghan.com/technical/*
 	#
 
-	url(r'^technical$', direct_to_template, {'template': 'technical.html'}, name='technical'),
-	url(r'^technical/voting-restoration$', redirect_to, {'url': 'http://meredithmcghan.com/media/documents/technical/voting-restoration-nevada-2008.pdf'}, name='voting_restoration'),
+	url(r'^technical$', TemplateView.as_view(template_name='technical.html'), name='technical'),
+	url(r'^technical/voting-restoration$', RedirectView.as_view(url='http://meredithmcghan.com/media/documents/technical/voting-restoration-nevada-2008.pdf'), name='voting_restoration'),
 	url(r'^technical/carpentry$', 'carpentry_gallery', name='carpentry_gallery'),  # Gallery
 
 	#
 	# meredithmcghan.com/marketing/*
 	#
 
-	url(r'^marketing$', direct_to_template, {'template': 'marketing.html'}, name='marketing'),
+	url(r'^marketing$', TemplateView.as_view(template_name='marketing.html'), name='marketing'),
 	url(r'^marketing/social-light$', 'scanned_articles', {'paths': ['marketing/social-light']}, name='social_light'),
 	url(r'^marketing/etsy-artists$', 'scanned_articles', {'paths': ['marketing/etsy-artists-1', 'marketing/etsy-artists-2']}, name='etsy_artists'),
 	url(r'^marketing/pumpkin-spa$', 'scanned_articles', {'paths': ['marketing/pumpkin-spa-1', 'marketing/pumpkin-spa-2']}, name='pumpkin_spa'),
@@ -61,10 +61,10 @@ urlpatterns = patterns('mmcghan.views',
 	# meredithmcghan.com/journalism/*
 	#
 
-	url(r'^journalism$', direct_to_template, {'template': 'journalism.html'}, name='journalism'),
+	url(r'^journalism$', TemplateView.as_view(template_name='journalism.html'), name='journalism'),
 	url(r'^journalism/less-than-zero$', 'scanned_articles', {'paths': ['journalism/less-than-zero']}, name='less_than_zero'),
 	url(r'^journalism/at-what-cost$', 'scanned_articles', {'paths': ['journalism/at-what-cost']}, name='at_what_cost'),
-	url(r'^journalism/fake-news$', direct_to_template, {'template': 'journalism/fake-news.html'}, name='fake_news'),
+	url(r'^journalism/fake-news$', TemplateView.as_view(template_name='journalism/fake-news.html'), name='fake_news'),
 	url(r'^journalism/greening-vegas$', 'scanned_articles', {'paths': ['journalism/greening-vegas']}, name='greening_vegas'),
 
 	# The cover stories are in the gallery, should they each get their own separately addressable URL?
@@ -75,8 +75,8 @@ urlpatterns = patterns('mmcghan.views',
 	# meredithmcghan.com/entertainment/*
 	#
 
-	url(r'^entertainment$', direct_to_template, {'template': 'entertainment.html'}, name='entertainment'),
-	url(r'^entertainment/radiskull$', direct_to_template, {'template': 'entertainment/radiskull.html'}, name='radiskull'),
+	url(r'^entertainment$', TemplateView.as_view(template_name='entertainment.html'), name='entertainment'),
+	url(r'^entertainment/radiskull$', TemplateView.as_view(template_name='entertainment/radiskull.html'), name='radiskull'),
 	url(r'^entertainment/almost-freaky$', 'scanned_articles', {'paths': ['entertainment/almost-freaky']}, name='almost_freaky'),
 	url(r'^entertainment/whats-on$', 'whats_on_gallery', name='whats_on_gallery'), # Gallery...
 
@@ -84,7 +84,7 @@ urlpatterns = patterns('mmcghan.views',
 	# meredithmcghan.com/commentary/*
 	#
 
-	url(r'^commentary$', direct_to_template, {'template': 'commentary.html'}, name='commentary'),
+	url(r'^commentary$', TemplateView.as_view(template_name='commentary.html'), name='commentary'),
 	url(r'^commentary/flint$', 'scanned_articles', {'paths': ['commentary/flint']}, name='flint'),
 	url(r'^commentary/ta-confessions$', 'scanned_articles', {'paths': ['commentary/ta-confessions']}, name='ta_confessions'),
 	url(r'^commentary/slant$', 'slant_gallery', name='slant_gallery'), # Gallery...
@@ -93,7 +93,7 @@ urlpatterns = patterns('mmcghan.views',
 	# meredithmcghan.com/creative/*
 	#
 
-	url(r'^creative$', direct_to_template, {'template': 'creative.html'}, name='creative'),
+	url(r'^creative$', TemplateView.as_view(template_name='creative.html'), name='creative'),
 	url(r'^creative/waiting-bus$', 'scanned_articles', {'paths': ['creative/waiting-bus']}, name='waiting_bus'),
 	url(r'^creative/perspectives$', 'perspectives_gallery', name='perspectives_gallery'), # Gallery...
 	url(r'^creative/branding$', 'branding_gallery', name='branding_gallery'), # Gallery...
@@ -101,12 +101,12 @@ urlpatterns = patterns('mmcghan.views',
 	#
 	# meredithmcghan.com/advocacy/*
 	#
-	url(r'^advocacy/outreach$', direct_to_template, {'template': 'advocacy/outreach.html'}, name='nonprofit_outreach'),
+	url(r'^advocacy/outreach$', TemplateView.as_view(template_name='advocacy/outreach.html'), name='nonprofit_outreach'),
 
 	#
 	# meredithmcghan.com/for-sale/*
 	#
-	url(r'^for-sale/2005-saturn-ion$', direct_to_template, {'template': 'for-sale/2005-saturn-ion.html'}, name='for_sale_2005_saturn_ion'),
+	url(r'^for-sale/2005-saturn-ion$', TemplateView.as_view(template_name='for-sale/2005-saturn-ion.html'), name='for_sale_2005_saturn_ion'),
 	
 	#
 	# experiment

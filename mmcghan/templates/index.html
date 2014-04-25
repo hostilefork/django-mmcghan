@@ -4,38 +4,38 @@
 <h2>Welcome!</h2>
 <p>I'm a writer and editor with a multidisciplinary background. As a former print journalist and college English teacher, I've specialized in local publications (with a focus on social justice issues and the arts):</p>
 
-<p><a href="{% url journalism %}">Journalism</a> &bull;
-	<a href="{% url technical %}">Technical Writing</a> &bull;
-	<a href="{% url marketing %}">Marketing Communication and Trade</a> &bull;
-	<a href="{% url entertainment %}">Arts and Entertainment</a> &bull;
-	<a href="{% url commentary %}">Commentary</a> &bull;
-	<a href="{% url creative %}">Creativity</a></p>
+<p><a href="{% url 'journalism' %}">Journalism</a> &bull;
+	<a href="{% url 'technical' %}">Technical Writing</a> &bull;
+	<a href="{% url 'marketing' %}">Marketing Communication and Trade</a> &bull;
+	<a href="{% url 'entertainment' %}">Arts and Entertainment</a> &bull;
+	<a href="{% url 'commentary' %}">Commentary</a> &bull;
+	<a href="{% url 'creative' %}">Creativity</a></p>
 
-<p>As part of becoming more fluent in the digital medium, I've begun to delve into web development, <a href="http://blog.meredithmcghan.com">started a blog</a> about my findings, and began an outreach project to <a href="http://meredithmcghan.com/advocacy/outreach">help nonprofits with their websites</a>. I've also scanned in some samples of printed work I've written and edited over the years. Click on the thumbnails below to have a look at the galleries, and feel free to <a href="{% url contact %}">contact me</a>!</p>
+<p>As part of becoming more fluent in the digital medium, I've begun to delve into web development, <a href="http://blog.meredithmcghan.com">started a blog</a> about my findings, and began an outreach project to <a href="http://meredithmcghan.com/advocacy/outreach">help nonprofits with their websites</a>. I've also scanned in some samples of printed work I've written and edited over the years. Click on the thumbnails below to have a look at the galleries, and feel free to <a href="{% url 'contact' %}">contact me</a>!</p>
 
 <table>
 	<tr>
 		<td>
-			<a href="{% url cover_stories_gallery %}"><img src="http://meredithmcghan.com/media/graphics/cover-stories-320x240.jpg" alt="Cover Stories Gallery" /></a>
+			<a href="{% url 'cover_stories_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/cover-stories-320x240.jpg" alt="Cover Stories Gallery" /></a>
 		</td>
 		<td>
-			<a href="{% url whats_on_gallery %}"><img src="http://meredithmcghan.com/media/graphics/shows-320x240.jpg" alt="What's On Gallery" /></a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<a href="{% url carpentry_gallery %}"><img src="http://meredithmcghan.com/media/graphics/carpentry-320x240.jpg" alt="Carpentry Gallery" /></a>
-		</td>
-		<td>
-			<a href="{% url perspectives_gallery %}"><img src="http://meredithmcghan.com/media/graphics/perspectives-320x240.jpg" alt="Perspectives Gallery" /></a>
+			<a href="{% url 'whats_on_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/shows-320x240.jpg" alt="What's On Gallery" /></a>
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<a href="{% url poker_gallery %}"><img src="http://meredithmcghan.com/media/graphics/poker-320x240.jpg" alt="Poker Gallery" /></a>
+			<a href="{% url 'carpentry_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/carpentry-320x240.jpg" alt="Carpentry Gallery" /></a>
 		</td>
 		<td>
-			<a href="{% url slant_gallery %}"><img src="http://meredithmcghan.com/media/graphics/slant-320x240.jpg" alt="Slant Gallery" /></a>
+			<a href="{% url 'perspectives_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/perspectives-320x240.jpg" alt="Perspectives Gallery" /></a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="{% url 'poker_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/poker-320x240.jpg" alt="Poker Gallery" /></a>
+		</td>
+		<td>
+			<a href="{% url 'slant_gallery' %}"><img src="http://meredithmcghan.com/media/graphics/slant-320x240.jpg" alt="Slant Gallery" /></a>
 		</td>
 	</tr>
 </table>
